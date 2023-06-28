@@ -64,7 +64,7 @@ body::-webkit-scrollbar {
     width:40vmin;
     height:56vmin;
     object-fit:cover;
-    object-position: center center;
+
 }
 
 #image-track
@@ -74,4 +74,9 @@ body::-webkit-scrollbar {
     position: relative;
     left:50%;
    
+}
+
+.image:hover
+{
+cursor:grab;
 }
