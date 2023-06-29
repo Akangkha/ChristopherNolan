@@ -176,7 +176,7 @@ b{color: rgb(255, 255, 255);}
     
 }
 
-.fifth div
+.divv
 {
  margin:60px;   
  padding:10px;   
@@ -190,7 +190,18 @@ a{
     color:white ;
 }
 
-iframe
+.video
 {
-    border-radius: 340px;
+   
+    width: 400px;
+    background-color: black;
+    border-radius: 1340px;
+    object-fit: cover;
+}
+
+video
+{
+  border-radius: 1340px;
+    height: 400px;
+    width: 400px;
 }
