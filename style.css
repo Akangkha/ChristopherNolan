@@ -94,7 +94,7 @@ body::-webkit-scrollbar {
 
 }
 
-.fourth
+.fourth,.fifth
 {
     color: white;
     display: flex;
@@ -166,4 +166,31 @@ b{color: rgb(255, 255, 255);}
     background-image: url("./media/main3.jpg");
     height: 100vh;
     background-size: cover;
+}
+
+.fifth
+{  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.fifth div
+{
+ margin:60px;   
+ padding:10px;   
+ width: 100vw;
+ text-align: center;
+  background-color: #0000003e;
+}
+
+a{
+    text-decoration: none;
+    color:white ;
+}
+
+iframe
+{
+    border-radius: 140px;
 }
