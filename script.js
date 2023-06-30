@@ -3,8 +3,6 @@ window.onmousedown = (e) => {
   track.dataset.mouseDownAt = e.clientX;
 };
 
-
-
 window.onmousemove = (e) => {
   if (track.dataset.mouseDownAt == "0") return;
 
@@ -37,36 +35,17 @@ window.onmouseup = () => {
   track.dataset.prevPercentage = track.dataset.percentage;
 };
 
+let path = document.querySelector("path");
+let pathLength = path.getTotalLength("path");
+console.log("pathlength:" + pathLength);
+path.style.strokeDasharray = pathLength + " ";
+path.style.strokeDashoffset = pathLength;
+window.addEventListener("scroll", () => {
+  var scrollPercentage =
+    document.documentElement.scrollTop / document.documentElement.clientHeight;
+  console.log(scrollPercentage);
 
-let path=document.querySelector('path');
-let pathLength=path.getTotalLength('path');
-console.log('pathlength:'+pathLength); 
-path.style.strokeDasharray = pathLength+" ";
-path.style.strokeDashoffset=pathLength;
-window.addEventListener('scroll',()=>
-{
-   var scrollPercentage=(document.documentElement.scrollTop)/(document.documentElement.clientHeight);
-   console.log(scrollPercentage); 
-   
-  var drawLength = pathLength * (scrollPercentage);
-  path.style.strokeDashoffset=pathLength- (drawLength-600);
-})
+  var drawLength = pathLength * scrollPercentage;
+  path.style.strokeDashoffset = pathLength - (drawLength - 600);
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// track.style.transform = `translate(${percentage}%,  0%)`;
-
-// image.style.objectPosition = `${nextPercentage + 100}% 50%`;
-//  image.style.filter = `brightness(50%)`;
-// console.log(nextPercentage + 100);
